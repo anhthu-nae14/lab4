@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả dự đoán</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="text-center">Kết quả dự đoán</h1>
+
+            <div class="info">
+                <p><strong>Họ và tên:</strong> Phan Anh Thu</p>
+                <p><strong>MSSV:</strong> 2274802010872</p>
+            </div>
+
+            <div class="result">
+                <p><strong>Dự đoán:</strong> {{ prediction }}</p>
+                <p><strong>Độ chính xác:</strong> {{ accuracy }}%</p>
+            </div>
+
+            <div class="text-center">
+                <a href="/" class="btn btn-primary">Trở về trang chủ</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
